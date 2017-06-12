@@ -1,0 +1,7 @@
+<%= form_for @pelicula do |epelicula| %>
+	<%= epelicula.text_field :name %>
+	<%= epelicula.text_field :main_actor %>
+	<%= epelicula.text_field :stars %>
+	<%= epelicula.text_field :year %>
+	<%= epelicula.submit, "Guardar" %>
+<% end %>
