@@ -3,11 +3,11 @@ Rails.application.routes.draw do
   devise_for :users
   root :to => "statics#index"
 
-  get '/about' => 'static#about', :as => :about
+  get '/about' => 'statics#about', :as => :about
 
   get 'statics/index'
 
-  get 'statics/about'
+  # get 'statics/about'
 
   get 'peliculas/index'
 
