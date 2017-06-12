@@ -1,0 +1,7 @@
+<%= form_for @pelicula do |npelicula| %>
+	<%= npelicula.text_field :name %>
+	<%= npelicula.text_field :main_actor %>
+	<%= npelicula.text_field :stars %>
+	<%= npelicula.text_field :year %>
+	<%= npelicula.submit "Añadir" %>
+<% end %>
