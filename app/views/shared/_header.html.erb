@@ -1,21 +1,47 @@
-	<% if user_signed_in? %>
-		<nav class="navbar navbar-default">
-			<ul class="nav navbar-nav">
-				<li><%= link_to "Añadir pelicula", new_pelicula_path %></li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li class="clas"> <%=link_to "Editar usuario",  edit_user_registration_path %></li>
-				<li class="clas"> <%=link_to "Salir", destroy_user_session_path, :method => :delete %></li>
-			</ul>
-		</nav>
-	<% else %>
-		<nav class="navbar navbar-default">
-			<ul class="nav navbar-nav">
-				<li><%= link_to "Nosotros", about_path %></li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li><%=link_to "Entrar", new_user_session_path %></li>
-				<li class="clas"> <%=link_to "Registrate", new_user_registration_path %></li>
-			</ul>
-		</nav>
-	<% end %>
+<div class="header">
+	<div class="hidden-xs">
+		<% if user_signed_in? %>
+			<nav class="navbar navbar-default">
+				<ul class="nav navbar-nav">
+					<li><%= link_to "Añadir pelicula", new_pelicula_path %></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li> <%=link_to "Editar usuario",  edit_user_registration_path %></li>
+					<li> <%=link_to "Salir", destroy_user_session_path, :method => :delete %></li>
+				</ul>
+			</nav>
+	</div>
+		<div class="visible-xs">
+			<nav class="navbar navbar-default">
+				<ul class="nav navbar-nav">
+					<button class="hd-xs"><%= link_to "Pelicula", new_pelicula_path %></button>>
+					<button class="hd-xs"> <%=link_to "Editar",  edit_user_registration_path %></button>>
+					<button class="hd-xs"> <%=link_to "Go away", destroy_user_session_path, :method => :delete %></button>>
+				</ul>
+			</nav>
+		</div>
+		<% else %>
+			<div class="hidden-xs">
+				<nav class="navbar navbar-default">
+					<ul class="nav navbar-nav">
+						<li><%=link_to "Entrar", new_user_session_path %></li>
+						<li> <%=link_to "Registrate", new_user_registration_path %></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><%= link_to "Nosotros", about_path %></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="visible-xs">
+				<nav class="navbar navbar-default">
+					<ul class="nav navbar-nav">
+						<li class="hd-xs"><%=link_to "Entrar", new_user_session_path %></li>
+						<li class="hd-xs"> <%=link_to "Registrate", new_user_registration_path %></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="hd-xs"><%= link_to "Nosotros", about_path %></li>
+					</ul>
+				</nav>
+			</div>
+		<% end %>
+</div>
