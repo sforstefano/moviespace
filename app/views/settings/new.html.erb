@@ -1,0 +1,14 @@
+<div class="container">	
+    <div class="col-lg-6 col-md-6">
+        <div class="editar">
+            <%= form_for(@setting) do |f| %>
+                <p>País</p>
+                <p><%= f.text_field :country, placeholder: "País", class:"form-control" %></p>
+                <br/>
+                <p><%= f.text_field :language, placeholder: "Idioma", class:"form-control" %></p>
+                <br/>
+                <p><%= f.submit "Guardar" %></p>
+        	<% end %>
+        </div>
+    </div>
+</div>

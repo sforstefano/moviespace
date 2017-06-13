@@ -1,0 +1,22 @@
+ utdiytvitu
+ <div class="container">	
+	 <div class="show"> 
+		 <div class="col-lg-6">
+			 <div class="showPeli">
+				 <%if !@setting.nil?%>
+				 
+				   	 <p>País: <%= @setting.country %></p>
+				   	 <br/>
+				   	 <p>Idioma: <%= @setting.language %></p>
+				   	 <br/>
+				 
+				     <p><%= link_to ' Editar', edit_setting_path(@setting.id) %></p>
+				    
+				 <%else%>
+				 
+				   	<%= link_to 'Añadir', new_setting_path %>
+				 <%end%>
+			 </div>
+		 </div>
+	 </div>
+ </div>
