@@ -15,7 +15,9 @@ Rails.application.routes.draw do
 
   get 'peliculas/index'
 
-  resources :peliculas
+  resources :peliculas do 
+    resources :comentarios
+  end
   resources :settings
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
