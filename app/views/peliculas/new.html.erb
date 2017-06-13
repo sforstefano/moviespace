@@ -1,6 +1,7 @@
 <div class="container">
 	<div class="hidden-xs">
 		<div class="crear">
+			<%= form_for @pelicula do |futbol| %>
 						<p>Tiutulo</p>
 						<p><%= futbol.text_field :name  %></p>
 						<br/>
@@ -13,12 +14,7 @@
 						<p>Año</p>
 						<p><%= futbol.text_field :year %></p>
 						<br/>
-						<p>Sinposis</p>
-						<p><%= futbol.text_field :description, :class => "desc"%></p>
-						<br/>
-						<p>Poster</p>
-						<p><%= futbol.file_field :poster %></p>
-						<br/>
+			<%= futbol.submit "Guardar" %>
 			<% end %>
 		</div>
 	</div>
@@ -26,5 +22,4 @@
 <div class="col-xs-12 visible-xs">
 <p class="xsAviso">No disponible en versión mobil.</p>
 <br/>
-<button class="xs"><%=link_to "Volver a inicio", root_path %></button>
 </div>
