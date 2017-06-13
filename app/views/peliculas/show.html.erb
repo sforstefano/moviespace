@@ -20,13 +20,12 @@
 		</div>
 	</div>
 </div>
+
 <%= render @pelicula.comentarios %>
 
 <div class="panel panel-default panelmod1" style=" box-shadow: 1px 2px 3px gray;"> 
-<span style="font-size: 2em; margin-left:-7px;margin-bottom: 10px;">Añadir comentarios</span>
 
+<span style="font-size: 2em; margin-left:-7px;margin-bottom: 10px;">Añadir comentarios</span>
 <!-- AÑADIR COMENTARIOS -->
 <%= render "comentarios/form" %>
 
-<%= link_to 'Editar Pelicula', edit_pelicula_path(@pelicula), class:"btn btn-sm btn-success" %>
-<%= link_to 'Back to Peliculas', peliculas_path, class:"btn btn-sm btn-info" %>
