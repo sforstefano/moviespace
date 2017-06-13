@@ -12,5 +12,11 @@
 				<br/>
 			</div>
 		</div>
+		<div class="visible-lg">
+			<% if user_signed_in? %>
+				<button><%= link_to "Editar Pelicula", edit_pelicula_path %></button>
+				<button><%= link_to 'Borrar pelicula', pelicula_path(@pelicula), :method => :delete %></button>
+			<% end %>
+		</div>
 	</div>
 </div>
