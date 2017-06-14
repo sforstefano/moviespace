@@ -3,11 +3,12 @@
 		<% if user_signed_in? %>
 			<nav class="navbar navbar-default">
 				<ul class="nav navbar-nav">
+					<li><%=link_to "Inicio", root_path %></li>
 					<li><%= link_to "Añadir pelicula", new_pelicula_path %></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li> <%=link_to "Editar usuario",  edit_user_registration_path %></li>
-					<li> <%=link_to "Salir", destroy_user_session_path, :method => :delete %></li>
+					<li> <%= link_to 'Logout', destroy_user_session_path, method: :delete %> </li>
 				</ul>
 			</nav>
 	</div>
@@ -16,7 +17,8 @@
 				<ul class="nav navbar-nav">
 					<button class="hd-xs"><%= link_to "Pelicula", new_pelicula_path %></button>>
 					<button class="hd-xs"> <%=link_to "Editar",  edit_user_registration_path %></button>>
-					<button class="hd-xs"> <%=link_to "Go away", destroy_user_session_path, :method => :delete %></button>>
+
+					<button class="hd-xs"> <%= link_to "Go away", destroy_user_session_path, method: :delete %></button>
 				</ul>
 			</nav>
 		</div>
