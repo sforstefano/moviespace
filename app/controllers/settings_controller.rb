@@ -1,6 +1,6 @@
 class SettingsController < ApplicationController
 	layout 'admin'
-
+	 
 	def index
 		@setting = current_user.setting
 	end
@@ -11,12 +11,13 @@ class SettingsController < ApplicationController
 
 	def new
 		@setting = current_user.build_setting
+		
 	end
 
 	def create
 		@setting = current_user.build_setting(setting_params)
-
 		if @setting.save
+			flash[:danger] = t('flash.hello')
 			redirect_to settings_path
 		else
 			render :new

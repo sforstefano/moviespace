@@ -21,3 +21,9 @@
 
 en:
   hello: "Hello world"
+  setting:
+    no_country: "Tienes que añadir un país"
+    no_language: "Tienes que añadir un idioma"
+    too_short: "Tiene que tener mínimo 2 caracteres"
+    titulo_index: "Bienvneido a administración."
+

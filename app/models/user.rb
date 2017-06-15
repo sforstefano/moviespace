@@ -4,9 +4,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_one :setting
-  after_destroy :same_callback_method
-
-    def same_callback_method
-    	destroy :setting, :user_id;
-  	end
+  has_many :payments
 end

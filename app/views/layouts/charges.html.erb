@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<%= tag :meta, :name=> 'stripe-key', :content => Rails.configuration.stripe[:publishable_key] %>
+  </head>
+  <body>
+    <%= yield %>
+  </body>
+</html>
