@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   	
   
 
+  get 'select_movies/index'
+
   devise_for :users
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -26,6 +28,8 @@ Rails.application.routes.draw do
     resources :comentarios
   end
   resources :settings
+
+  resources :select_movies
 
   root :to => "statics#index"
   
