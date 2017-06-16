@@ -1,20 +1,38 @@
 <div class="container">
 	<div class="row">
-	  <div class="col-sm-12" style="text-align:center;">
+	  <div class="col-sm-12">
 	    <%= form_tag(root_path, :method => "get", id: "search-form") do %>
-	        <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
-	        <%= submit_tag t('general.send') %>
+	        <%= text_field_tag :search, params[:search], placeholder: "Buscar por actor" %>
+	        <%= text_field_tag :search_year, params[:search_year], placeholder: "Buscar por año"  %>
+	        <%= submit_tag "capullo" %>
+	        <div id="category_select"></div>
 	    <% end %>
+	    <br/>
+	    <select name="Categorias">
+			  <option value="">Selecciona genero</option>
+			  <option value="1">Acción</option>
+			  <option value="2">Drama</option>
+			  <option value="1">Comedia</option>
+			  <option value="2">Ciencia Ficción</option>
+			  <option value="3">Fantasia</option>
+			  <option value="4">Terror</option>			  
+			  <option value="5">Romance</option>
+			  <option value="6">Musical</option>
+			  <option value="7">Suspense</option>
+		</select>
 	  </div>
 	</div>
 	<div class="row">
 	    <% @peliculas.each do |peli| %>
 		    <div class="col-sm-6 col-md-4 col-lg-3">
 		        <div class="latest-movie">
-		            <p><b>Nombre:</b> <%=peli.name%></p>
 		            <a href="#"><img src="<%=peli.url%>"></a>
+		            <p><b>Nombre:</b> <%=peli.name%></p>
 		        </div>
 		    </div>
 	    <% end %>
 	</div>
 </div>
+
+
+    	
