@@ -4,6 +4,9 @@ before_action :authenticate_user!, except: [:index, :show]
       @peliculas = Pelicula.all
       #muestra las peliculas que hay en la base de datos
    end
+
+
+
    
    def show
       @pelicula = Pelicula.find(params[:id])

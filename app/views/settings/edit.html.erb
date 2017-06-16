@@ -1,10 +1,11 @@
+    <% if flash.present? %>
+        <div class="row">
+            <div class="col-sm-12 col-md-6 colmd-offset-3" style="padding:25px 0">
+            <%= render partial: "shared/flash_messages", flash: flash %>
+        </div>
+    <% end %> 
+
 <div class="container">
-	<% if flash.present? %>
-	<div class="row">
-		<div class="col-sm-12 col-md-6 colmd-offset-3" style="padding:25px">
-		<%= render partial: "shared/flash_messages", flash: flash %>
-	</div>
-	<% end %>
 	<div class="col-lg-6 col-md-6">
 		<div class="editar"> 
 				

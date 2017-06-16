@@ -21,6 +21,8 @@
 
 en:
   hello: "Hello world"
+  bien: "Registro añadido correctamente"
+  mal: "Registro incorrecto"
   setting:
     no_country: "Tienes que añadir un país"
     no_language: "Tienes que añadir un idioma"

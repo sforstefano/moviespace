@@ -17,9 +17,9 @@ class SettingsController < ApplicationController
 	def create
 		@setting = current_user.build_setting(setting_params)
 		if @setting.save
-			flash[:danger] = t('flash.hello')
 			redirect_to settings_path
 		else
+			flash[:error] = t('mal')
 			render :new
 		end
 	end
