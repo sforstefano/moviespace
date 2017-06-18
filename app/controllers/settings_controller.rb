@@ -3,6 +3,8 @@ class SettingsController < ApplicationController
 	 
 	def index
 		@setting = current_user.setting
+
+		@payment =  current_user.payments
 	end
 
 	def show
