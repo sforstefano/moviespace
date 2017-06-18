@@ -25,16 +25,18 @@
 <br>
 <div class="container">
 	<div class="row">
-	    <% @peliculas.each do |peli| %>
-		    <div class="col-sm-12 col-md-4 col-lg-4">
-		        <div class="select-movie">
-		            <a href="#"><img src="<%=peli.url%>"></a>
-		            <p><%=peli.name%></p>
-		            <p><%= peli.precio %></p>
-		            <button>Comprar</button>
-		        </div>
-		        <br/>
-		    </div>
-	    <% end %>
+		<div align="center">
+		    <% @peliculas.each do |peli| %>
+			    <div class="col-sm-12 col-md-4 col-lg-4">
+			        <div class="select-movie">
+			            <a href="#"><img src="<%=peli.url%>"></a>
+			            <p><%=peli.name%></p>
+			            <p><%= peli.precio %></p>
+			            <button>Comprar</button>
+			        </div>
+			        <br/>
+			    </div>
+		    <% end %>
+		</div>
 	</div>
 </div>
