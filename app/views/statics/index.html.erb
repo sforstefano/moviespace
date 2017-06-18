@@ -3,10 +3,18 @@
 	  <div class="col-sm-12">
 	    <%= form_tag(root_path, :method => "get", id: "search-form") do %>
 	        <%= text_field_tag :search, params[:search], placeholder: "Buscar por actor" %>
-	        <%= text_field_tag :search_year, params[:search_year], placeholder: "Buscar por año"  %>
-	        <%= submit_tag "capullo" %>
+	        	<%= submit_tag "capullo" %>
+	    <% end %>
+	    <%= form_tag(root_path, :method => "get", id: "search-year-form") do %>
+    		<%= text_field_tag :search_year, params[:search_year], placeholder: "Buscar por año"  %>
+    			<%= submit_tag "capullo" %>
 	        <div id="category_select"></div>
 	    <% end %>
+
+
+
+
+
 	    <br/>
 	    <select name="Categorias">
 			  <option value="">Selecciona genero</option>
