@@ -25,10 +25,11 @@
 	<div class="row">
 	    <% @peliculas.each do |peli| %>
 		    <div class="col-sm-6 col-md-4 col-lg-3">
-		        <div class="latest-movie">
+		        <div class="select-movie">
 		            <a href="#"><img src="<%=peli.url%>"></a>
 		            <p><b>Nombre:</b> <%=peli.name%></p>
 		            <p><%= peli.precio %></p>
+		            <button>Comprar</button>
 		        </div>
 		    </div>
 	    <% end %>
