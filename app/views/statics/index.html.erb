@@ -13,7 +13,7 @@
 
 
 		<%= form_tag(root_path, :method => "get", id: "search-genre-form") do %>
-			<%= select_tag :search_genre, ("<option> --Genre--</option><br><option>ACTION</option><option>ADVENTURE</option><option>COMEDY</option><option>CRIME</option><option>DRAMA</option><option>HISTORICAL</option><option>HORROR</option><option>MUSICALS</option><option>SIENCE-FICTION</option><option>WAR</option><option>WESTERNS</option>").html_safe, class: 'btn btn-default', :onchange => "this.form.submit()"%>
+			<%= select_tag :search_genre, ("<option> --Genre--</option><br><option>action</option><option>ADVENTURE</option><option>COMEDY</option><option>CRIME</option><option>DRAMA</option><option>HISTORICAL</option><option>HORROR</option><option>MUSICALS</option><option>SIENCE-FICTION</option><option>WAR</option><option>WESTERNS</option>").html_safe, class: 'btn btn-default', :onchange => "this.form.submit()"%>
 			<% end %>
 		</div>	
 
