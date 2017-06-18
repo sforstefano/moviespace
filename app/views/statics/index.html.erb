@@ -5,21 +5,21 @@
 	        <%= text_field_tag :search, params[:search], placeholder: "Buscar por actor" %>
 	        	<%= submit_tag "capullo" %>
 	    <% end %>
+	    <br/>
 	    <%= form_tag(root_path, :method => "get", id: "search-year-form") do %>
     		<%= text_field_tag :search_year, params[:search_year], placeholder: "Buscar por año"  %>
     			<%= submit_tag "capullo" %>
-	        <div id="category_select"></div>
 	    <% end %>
-
-
+	    <br/>
 		<%= form_tag(root_path, :method => "get", id: "search-genre-form") do %>
-			<%= select_tag :search_genre, ("<option> --Genre--</option><br><option>action</option><option>ADVENTURE</option><option>COMEDY</option><option>CRIME</option><option>DRAMA</option><option>HISTORICAL</option><option>HORROR</option><option>MUSICALS</option><option>SIENCE-FICTION</option><option>WAR</option><option>WESTERNS</option>").html_safe, class: 'btn btn-default', :onchange => "this.form.submit()"%>
+			<%= select_tag :search_genre, ("<option>Selecciona por género</option><br><option>Drama</option><option>Fantasia</option><option>Animación</option><option>Acción</option><option>Terror</option><option>Musical</option><option>Aventura</option><option>Ciencia ficción</option><option>Suspense</option><option>Bélico</option><option>Western</option>").html_safe, class: 'btn btn-default', :onchange => "this.form.submit()"%>
 			<% end %>
-		</div>	
+		<br/>
 
 	    <br/>
 	  </div>
 	</div>
+<div class="container">
 	<div class="row">
 	    <% @peliculas.each do |peli| %>
 		    <div class="col-sm-6 col-md-4 col-lg-3">
