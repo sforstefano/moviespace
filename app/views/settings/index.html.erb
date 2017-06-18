@@ -25,9 +25,9 @@
 			 </div>
 		 </div>
 	 </div>
-	 			<% if !@charges.nil? %>
+	 		<% if !@payment.nil? %>
 				<h2>Payments</h2>
-				<%@charge.each do |payment|%>
+				<%@payment.each do |payment|%>
 					<p><b>Subscription active:</b></p>
 					<p><%= payment.subscription %></p>
 					<p><b>Payment Channel:</b></p>
@@ -41,4 +41,5 @@
 					<hr>				
 				<%end%>
 			<%end%>
+
  </div>
