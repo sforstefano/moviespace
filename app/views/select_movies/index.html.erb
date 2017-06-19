@@ -32,11 +32,13 @@
 			            <a href="#"><img src="<%=peli.url%>"></a>
 			            <p><%=peli.name%></p>
 			            <p><%= peli.precio %></p>
- 						<%= link_to select_plan_path, movie: peli.id, class: "btn yellow" do %>
+ 						<%= link_to select_plan_path, pelicula: peli.id, class: "btn yellow" do %>
   						<i class="fa fa-search"></i> 
   						<%= t('general.select') %>
   						<% end %>
 			        </div>
+			        <br/>
+			        <br/>
 			        <br/>
 			    </div>
 		    <% end %>

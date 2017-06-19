@@ -74,6 +74,12 @@ module ApplicationHelper
 		'Venezuela'=>'Venezuela','Vietnam'=>'Vietnam','Yemen'=>'Yemen',
 		'Zambia'=>'Zambia', 'Zimbabue'=>'Zimbabue'}
 	end
+
+	# def options_for_genre
+	# 	nombres = {'Drama' => 'Drama', 'Acción' => 'Acción', 'Comedia' => 'Comedia', 'Biográfico' => 'Biográfico', 'Histórico' => 'Histórico','Musical' => 'Musical',
+	# 	'Infantil' => 'Infantil', 'Animación' => 'Animación', 'Documental' => 'Documental', 'Aventura' => 'Aventura', 'Western' => 'Western', 'Bélico' => 'Bélico',
+	# 	'Ciencia ficción' => 'Ciencia ficción', 'Drama' => 'Drama', 'Suspenso' => 'Suspenso', 'Terror' => 'Terror'}
+	# end
 	 
 
 end
