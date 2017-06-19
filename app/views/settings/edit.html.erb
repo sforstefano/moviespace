@@ -7,13 +7,14 @@
 
 <div class="container">
 	<div class="col-lg-6 col-md-6">
-		<div class="editar"> 
-				
+		<div class="editar"> 		
 			<br/>
 			<br/>
 			<%= form_for @setting do |x|%>
-				<p>País</p>
-				<p><%= x.text_field :country  %></p>
+				<p>País:</p>
+				<div class="field">         	 
+				    <%= x.select :country, options_for_country, :prompt => 'Select One', class:'form-control' %>
+				</div> 
 				<br/>
 				<p>Idioma:</p>
 				<p><%= x.text_field :language %></p>
