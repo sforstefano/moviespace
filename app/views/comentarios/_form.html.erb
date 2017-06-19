@@ -1,11 +1,12 @@
 <!-- CREAR COMENTARIO -->
+<div class="container">
 <%= form_for([@pelicula, @pelicula.comentarios.build]) do |f| %>
 <p>
-<%= f.label :name %><br>
+<%= f.label "Nombre" %><br>
 <%= f.text_field :name %>
 </p>
 <p>
-<%= f.label :comment %><br>
+<%= f.label "Comentario" %><br>
 <%= f.text_area :comment, size: "80x4" %>
 </p>
 <p>
@@ -13,3 +14,4 @@
 </p>
 </div> <!-- end panel -->
 <% end %>
+</div>

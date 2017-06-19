@@ -1,16 +1,22 @@
 <!-- COMENTARIO -->
-<div class="panel panel-default">
-<!-- Default panel contents -->
-<div class="panel-heading"> <strong>Nombre:</strong>&nbsp;&nbsp; <%= comentario.name %> </div>
-<!-- List group -->
-<ul class="list-group">
-<li class="list-group-item">
-<strong>Comentario:</strong> <br></br><%= comentario.comment %>
-<br></br>
-<%= link_to 'Eliminar Comentario', [comentario.pelicula, comentario],
-method: :delete,
-data: { confirm: ' Estas seguro de borrar el comentario?' },class:'btn btn-xs btn-danger', style:'margin-bottom: 5px;' %>
-</li>
-</ul>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-4 col-sm-12">
+			<div class="panel panel-default">
+				<!-- Default panel contents -->
+				<div class="panel-heading"> <%= comentario.name %> </div>
+				<!-- List group -->
+				<ul class="list-group">
+					<li class="list-group-item">
+					<%= comentario.comment %>
+					<br></br>
+					<%= link_to 'Eliminar', [comentario.pelicula, comentario],
+					method: :delete,
+					data: { confirm: ' Estas seguro de borrar el comentario?' },class:'btn btn-xs btn-danger', style:'margin-bottom: 5px; margin-left: 80%;' %>
+					</li>
+				</ul>
 
-</div> <!-- end panel -->
+			</div> <!-- end panel -->
+		</div>
+	</div>
+</div>
