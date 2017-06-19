@@ -1,15 +1,19 @@
 <div class="container">
 	<div class="row">
 	  <div class="col-sm-6">
+
 	    <%= form_tag(select_movies_path, :method => "get", id: "search-form") do %>
 	        <%= text_field_tag :search, params[:search], placeholder: "Buscar por actor" %>
 	        	<%= submit_tag "Buscar" %>
 	    <% end %>
+
 	    <br/>
+
 	    <%= form_tag(select_movies_path, :method => "get", id: "search-year-form") do %>
     		<%= text_field_tag :search_year, params[:search_year], placeholder: "Buscar por año"  %>
     			<%= submit_tag "Buscar" %>
 	    <% end %>
+	    
 	    </div>
 	    <div class="col-sm-6">
 		<%= form_tag(select_movies_path, :method => "get", id: "search-genre-form") do %>
@@ -31,7 +35,7 @@
 			        <div class="select-movie">
 			            <a href="<%= pelicula_path(peli) %>"><img src="<%=peli.url%>"></a>
 						<p><%= link_to peli.name, peli %></p>
- 						<%= link_to select_plan_path, pelicula: :peli_id, class: "btn yellow" do %>
+ 						<%= link_to select_plan_path, peli: :pelicula_id, class: "btn yellow" do %>
   						<i class="fa fa-film"></i> 
   						<%= peli.precio %> €
   						<% end %>

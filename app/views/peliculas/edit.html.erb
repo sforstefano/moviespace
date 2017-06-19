@@ -1,3 +1,4 @@
+
 <div class="container">
 		<div class="col-lg-6 col-md-6 col-xs-12">
 			<div class="editar"> 
@@ -17,11 +18,13 @@
 					<p>Proagonista</p>
 					<p><%= pelic.text_field :main_actor, placeholder: "Actor principal" %></p>
 					<br/>
+					<p>Sinopsis</p>
+					<p><%= pelic.text_field :sinopsis,  placeholder: "Sinopsis" %></p>
 					<p>Año</p>
 					<p><%= pelic.text_field :year, placeholder: "Año" %></p>
 					<br/>	
 					<p>Poster</p>
-					<p><%= pelic.text_field :url,placeholder: "URL" %></p>	
+					<p><%= pelic.text_field :url, placeholder: "URL" %></p>	
 					<br/>
 				<%= pelic.submit "Guardar pelicula" %>
 				<%end%>

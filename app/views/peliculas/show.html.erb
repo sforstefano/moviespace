@@ -1,9 +1,15 @@
 <div class="container">
+	<div class="title">
+		<h1><%= @pelicula.name %></h1>
+	</div>
 	<div class="show">
-		<div class="col-lg-6">
+		<div class="col-lg-4">
+			<div class="poster">
+				<p><%= image_tag @pelicula.url %></p>
+			</div>
+		</div>
+		<div class="col-lg-8">
 			<div class="showPeli">
-				<h1><%= @pelicula.name %></h1>
-				<br/>
 				<p>Director <%= @pelicula.director %></p>
 				<br/>
 				<p>Estrellas: <%= @pelicula.stars %></p>
@@ -14,13 +20,12 @@
 				<br/>
 				<p><%= @pelicula.genre %></p>
 				<br/>
-				<div class="poster">
-				<p><%= image_tag @pelicula.url %></p>
-				</div>
+				<p><%= @pelicula.sinopsis %></p>
+				<br/>
 
 			</div>
 		</div>
-		<div class="visible-lg">
+		<div class="col-lg-4 visible-lg">
 			<% if user_signed_in? %>
 				<button><%= link_to "Editar Pelicula", edit_pelicula_path %></button>
 				<button><%= link_to 'Borrar pelicula', pelicula_path(@pelicula), :method => :delete %></button>
@@ -28,7 +33,9 @@
 		</div>
 	</div>
 </div>
-
+	<br/>
+	<br/>
+	<br/>
 <%= render @pelicula.comentarios %>
 
 <div class="panel panel-default panelmod1" style=" box-shadow: 1px 2px 3px gray;"> 
