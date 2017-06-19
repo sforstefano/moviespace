@@ -9,6 +9,8 @@
 					<p>Titulo</p>
 					<p><%= pelic.text_field :name, placeholder:"Título"  %></p>
 					<br/>
+					<p><%= pelic.text_field :original, placeholder:"Titulo original" %></p>
+					<br/>
 					<p>Director</p>
 					<p><%= pelic.text_field :director, placeholder:"Director" %></p>
 					<br/>
@@ -38,9 +40,15 @@
 						<div class="currentPeli">
 							<p><%= @pelicula.name %></p>
 							<br/>
+							<p><%= @pelicula.original %></p>
+							<br/>
+							<p><%= @pelicula.director %></p>
+							<br/>
 							<p>Estrellas: <%= @pelicula.stars %></p>
 							<br/>
 							<p>Protagonizada por <%= @pelicula.main_actor %></p>
+							<br/>
+							<p><%= @pelicula.sinopsis %></p>
 							<br/>
 							<p><%= @pelicula.year %></p>
 							<br/>

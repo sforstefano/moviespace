@@ -56,7 +56,7 @@ before_action :authenticate_user!, except: [:index, :show]
    private
 
       def pelicula_params
-            params.require(:pelicula).permit(:name, :main_actor, :stars, :year, :url, :director, :sinopsis )
+            params.require(:pelicula).permit(:name, :main_actor, :stars, :year, :url, :director, :sinopsis, :original )
       
       end
 
