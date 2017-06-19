@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   get '/select_plan' => 'payment_select#select_plan', as: :select_plan
 
+
+
   get '/about' => 'statics#about', :as => :about
 
   get 'statics/index'
