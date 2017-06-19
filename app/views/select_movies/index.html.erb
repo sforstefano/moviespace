@@ -29,12 +29,12 @@
 		    <% @peliculas.each do |peli| %>
 			    <div class="col-sm-12 col-md-4 col-lg-4">
 			        <div class="select-movie">
-			            <a href="#"><img src="<%=peli.url%>"></a>
-			            <p><%=peli.name%></p>
+			            <a href="<%= pelicula_path(peli) %>"><img src="<%=peli.url%>"></a>
+						<p><%= link_to peli.name, peli %></p>
 			            <p><%= peli.precio %></p>
- 						<%= link_to select_plan_path, pelicula: peli.id, class: "btn yellow" do %>
-  						<i class="fa fa-search"></i> 
-  						<%= t('general.select') %>
+ 						<%= link_to select_plan_path, pelicula: :peli_id, class: "btn yellow" do %>
+  						<i class="fa fa-film"></i> 
+  						<%= peli.precio %>
   						<% end %>
 			        </div>
 			        <br/>
