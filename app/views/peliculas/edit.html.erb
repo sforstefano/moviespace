@@ -11,6 +11,9 @@
 					<br/>
 					<p><%= pelic.text_field :original, placeholder:"Titulo original" %></p>
 					<br/>
+					<p>Genero</p>
+					<p><%= pelic.text_field :genre, placeholder:"Genero" %></p>
+					<br/>
 					<p>Director</p>
 					<p><%= pelic.text_field :director, placeholder:"Director" %></p>
 					<br/>
@@ -22,6 +25,7 @@
 					<br/>
 					<p>Sinopsis</p>
 					<p><%= pelic.text_field :sinopsis,  placeholder: "Sinopsis" %></p>
+					<br/>
 					<p>Año</p>
 					<p><%= pelic.text_field :year, placeholder: "Año" %></p>
 					<br/>	
@@ -41,6 +45,8 @@
 							<p><%= @pelicula.name %></p>
 							<br/>
 							<p><%= @pelicula.original %></p>
+							<br/>
+							<p><%= @pelic.genre %></p>
 							<br/>
 							<p><%= @pelicula.director %></p>
 							<br/>
