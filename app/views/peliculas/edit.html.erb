@@ -5,13 +5,16 @@
 				<br/>
 				<br/>
 				<%= form_for @pelicula do |pelic| %>
-					<p>Tiutulo</p>
+					<p>Titulo</p>
 					<p><%= pelic.text_field :name, placeholder:"Título"  %></p>
 					<br/>
-					<p>Puntuación:</p>
+					<p>Director</p>
+					<p><%= pelic.text_field :director, placeholder:"Director" %></p>
+					<br/>
+					<p>Puntuación</p>
 					<p><%= pelic.text_field :stars, placeholder: "Puntuación" %></p>
 					<br/>
-					<p>Actor principal</p>
+					<p>Proagonista</p>
 					<p><%= pelic.text_field :main_actor, placeholder: "Actor principal" %></p>
 					<br/>
 					<p>Año</p>

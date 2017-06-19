@@ -2,13 +2,16 @@
 	<div class="hidden-xs">
 		<div class="crear">
 			<%= form_for @pelicula do |futbol| %>
-						<p>Tiutulo</p>
+						<p>Titulo</p>
 						<p><%= futbol.text_field :name  %></p>
 						<br/>
-						<p>Puntuación:</p>
+						<p>Director</p>
+						<p><%= futbol.text_field :director %></p>
+						<br/>
+						<p>Puntuación</p>
 						<p><%= futbol.text_field :stars %></p>
 						<br/>
-						<p>Actor principal</p>
+						<p>Protagonista</p>
 						<p><%= futbol.text_field :main_actor %></p>
 						<br/>
 						<p>Año</p>
