@@ -26,24 +26,27 @@
 </div>
 <br/>
 <br>
-<div class="container">
-	<div class="row">
-		<div align="center">
-		    <% @peliculas.each do |peli| %>
-			    <div class="col-sm-12 col-md-4 col-lg-4">
-			        <div class="select-movie">
-			            <a href="<%= pelicula_path(peli) %>"><img src="<%=peli.url%>"></a>
-						<p><%= link_to peli.name, peli %></p>
- 						<%= link_to select_plan_path, peli: :pelicula_id, class: "btn yellow" do %>
-  						<i class="fa fa-film"></i> 
-  						<%= peli.precio %> €
-  						<% end %>
-			        </div>
-			        <br/>
-			        <br/>
-			        <br/>
-			    </div>
-		    <% end %>
+
+	<div class="container">
+		<div class="row">
+			<div align="center">
+			    <% @peliculas.each do |peli| %>
+				    <% if peli.precio != nil %>
+					    <div class="col-sm-12 col-md-4 col-lg-4">
+					        <div class="select-movie">
+					            <a href="<%= pelicula_path(peli) %>"><img src="<%=peli.url%>"></a>
+								<p><%= link_to peli.name, peli %></p>
+		 						<%= link_to select_plan_path, peli: :pelicula_id, class: "btn btn-default btn-md" do %>
+		  						<i class="fa fa-film"></i> 
+		  						 <%= peli.precio %> €
+		  						<% end %>
+					        </div>
+					        <br/>
+					        <br/>
+					        <br/>
+					    </div>
+					<% end %>
+			    <% end %>
+			</div>
 		</div>
 	</div>
-</div>
