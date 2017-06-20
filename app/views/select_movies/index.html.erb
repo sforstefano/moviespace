@@ -31,7 +31,7 @@
 		<div class="row">
 			<div align="center">
 			    <% @peliculas.each do |peli| %>
-				    <% if peli.precio != nil %>
+				    <% if peli.precio != 0 %>
 					    <div class="col-sm-12 col-md-4 col-lg-4">
 					        <div class="select-movie">
 					            <a href="<%= pelicula_path(peli) %>"><img src="<%=peli.url%>"></a>
