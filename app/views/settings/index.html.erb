@@ -25,8 +25,8 @@
 			 </div>
 		 </div>
 	 </div>
-	 		<% if !@payment.nil? %>
-				<h2>Payments</h2>
+	 	<% if !@payment.nil? %>
+			<h2>Payments</h2>
 				<%@payment.each do |payment|%>
 					<p><b>Subscription active:</b></p>
 					<p><%= payment.subscription %></p>
@@ -40,6 +40,6 @@
 					<p><%= payment.amount %></p>
 					<hr>				
 				<%end%>
-			<%end%>
+		<%end%>
 
  </div>

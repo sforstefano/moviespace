@@ -35,7 +35,7 @@ Rails.application.routes.draw do
   end
   resources :settings
 
-  resources :select_movies
+  resources :select_movies, only: :index
 
   root :to => "statics#index"
   

@@ -38,7 +38,7 @@
 								<p><%= link_to peli.name, peli %></p>
 		 						<%= link_to select_plan_path, peli: :pelicula_id, class: "btn btn-default btn-md" do %>
 		  						<i class="fa fa-film"></i> 
-		  						 <%= peli.precio/100.0 %> €
+		  						 <%= peli.precio %> €
 		  						<% end %>
 					        </div>
 					        <br/>
