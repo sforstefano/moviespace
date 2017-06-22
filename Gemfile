@@ -13,6 +13,8 @@ gem 'stripe'
 
 gem 'rails-i18n'
 
+gem 'sendgrid-ruby'
+
 gem 'devise', '~> 4.3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
