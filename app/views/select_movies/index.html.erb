@@ -36,7 +36,7 @@
 					        <div class="select-movie">
 					            <a href="<%= pelicula_path(peli) %>"><img src="<%=peli.url%>"></a>
 								<p><b><%= link_to peli.name, peli %></b></p>
-		 						<%= link_to select_plan_path, peli: :pelicula_id, class: "btn btn-default btn-md" do %>
+		 						<%= link_to select_plan_path(movie: peli.id, user: current_user), class: "btn btn-default btn-md" do %>
 		  						<i class="fa fa-film"></i> 
 			  						<% if peli.precio != nil %>
 			  						 <%= peli.precio/100.0 %> €

@@ -29,13 +29,14 @@ Rails.application.routes.draw do
   get 'settings/index'
 
   resources :charges
+    resources :select_movies, only: :index
 
   resources :peliculas do 
     resources :comentarios
   end
   resources :settings
 
-  resources :select_movies, only: :index
+  
 
   root :to => "statics#index"
   
