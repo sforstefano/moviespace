@@ -5,7 +5,7 @@
 	<div class="row">
 			<div class="col-lg-12 col-xs-12">
 				<div class="lista">
-					<h3 class="todo">Nuestras peliculas</h3>
+					<h3 class="todo"><%= link_to "Nuestras peliculas", statics_path %></h3>
 					<br/>
 					<% @peliculas.limit(10).each do |pelis| %>
 						<div class="peliculas">
@@ -60,4 +60,3 @@
 		</div>
 	</div>
 </div>
-<%= f.select :month, 1..12 %>
