@@ -35,7 +35,7 @@
 					    <div class="col-sm-12 col-md-4 col-lg-4">
 					        <div class="select-movie">
 					            <a href="<%= pelicula_path(peli) %>"><img src="<%=peli.url%>"></a>
-								<p><%= link_to peli.name, peli %></p>
+								<p><b><%= link_to peli.name, peli %></b></p>
 		 						<%= link_to select_plan_path, peli: :pelicula_id, class: "btn btn-default btn-md" do %>
 		  						<i class="fa fa-film"></i> 
 			  						<% if peli.precio != nil %>

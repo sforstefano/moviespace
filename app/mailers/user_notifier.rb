@@ -1,5 +1,5 @@
 class UserNotifierMailer < ApplicationMailer
-	default :from => 'stefanocattoni98@gmail.com'
+	default :from => 'popkornapp1@gmail.com'
 
   # send a signup email to the user, pass in the user object that   contains the user's email address
   def send_signup_email(user)

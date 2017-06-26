@@ -8,21 +8,25 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def new
   #   super
   # end
-
+  def new
+    super
+  end
   # POST /resource
   # def create
   #   super
   # end
   def create
     # Create the user from params
-    @user = User.new(params[:user])
-    if @user.save
-      # Deliver the signup email
-      UserNotifier.send_signup_email(@user).deliver
-      redirect_to(@user, :notice => 'User created')
-    else
-      render :action => 'new'
-    end
+    @user = current_user
+    # En el SCHEMA de la tabla USERS username,email
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:email])    
+    super
+      if @user.save
+        # Deliver the signup email
+        UserNotifierMailer.send_signup_email(@user).deliver
+        else
+          return redirect_to root_path
+      end
   end
   # GET /resource/edit
   # def edit

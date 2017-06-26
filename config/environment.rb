@@ -5,8 +5,8 @@ require_relative 'application'
 Rails.application.initialize!
 
 ActionMailer::Base.smtp_settings = {
-  :user_name => 'sforstefano',
-  :password => '@casa123',
+  :user_name => 'popkornapp3',
+  :password => '@Casa123',
   :domain => 'popkorn.herokuapp.com',
   :address => 'smtp.sendgrid.net',
   :port => 587,
