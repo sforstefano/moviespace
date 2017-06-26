@@ -52,6 +52,8 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+
+gem 'better_errors', '~> 2.1', '>= 2.1.1'
 end
 
 group :production do

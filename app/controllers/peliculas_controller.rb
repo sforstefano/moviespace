@@ -6,7 +6,6 @@ before_action :authenticate_user!, except: [:index, :show]
    end
 
 
-
    
    def show
       @pelicula = Pelicula.find(params[:id])

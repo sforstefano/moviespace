@@ -2,8 +2,25 @@ class SettingsController < ApplicationController
 	layout 'admin'
 	 
 	def index
+
 		@setting = current_user.setting
 		@payment =  current_user.payments
+
+		
+		#Mostar on tneim els erors puts "=" * 500
+		
+		
+
+		## Mostrar errors
+		# puts "=" * 100
+		# 	if @setting.country == "España"
+		# 		puts "si"
+		# 	else
+		# 		puts "No"
+		# 		puts @setting.country
+		# 	end
+		# puts "=" * 100
+
 	end
 
 	def show
