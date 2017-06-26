@@ -27,8 +27,6 @@
 			<div class="showPeli">
 				<p>Director <%= @pelicula.director %></p>
 				<br/>
-				<p>Estrellas: <%= @pelicula.stars %></p>
-				<br/>
 				<p>Protagonizada por <%= @pelicula.main_actor %></p>
 				<br/>
 				<p><%= @pelicula.year %></p>
@@ -52,7 +50,9 @@
 	<br/>
 	<br/>
 	<br/>
-<%= render @pelicula.comentarios %>
+
+	<%= render @pelicula.comentarios %>
+
 
 
 <!-- AÑADIR COMENTARIOS -->
