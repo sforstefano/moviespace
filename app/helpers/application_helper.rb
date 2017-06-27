@@ -75,5 +75,16 @@ module ApplicationHelper
 		'Zambia'=>'Zambia', 'Zimbabue'=>'Zimbabue'}
 	end
 
+	def options_for_genre
+		genre = {"Drama"=>"Drama", "Fantasia"=>"Fantasia", "Comedia"=>"Comedia", "Animación"=>"Animación", "Romántico"=>"Romántico", 
+			"Acción"=>"Acción", "Terror"=>"Terror", "Musical"=>"Musical", "Aventura"=>"Aventura", "Ciencia ficción"=>"Ciencia ficción",
+			 "Suspense"=>"Suspense", "Bélico"=>"Bélico", "Western"=>"Western"}
+	end
+
+	def options_for_score
+		score = {"1"=>"1", "2"=>"2", "3"=>"3", "4"=>"4", "5"=>"5"}
+		
+	end
+
 
 end

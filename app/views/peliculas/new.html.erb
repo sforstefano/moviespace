@@ -3,33 +3,37 @@
 		<div class="crear">
 			<%= form_for @pelicula do |futbol| %>
 						<p>Titulo</p>
-						<p><%= futbol.text_field :name  %></p>
+							<p><%= futbol.text_field :name  %></p>
 						<br/>
 						<p>Titulo original</p>
-						<p><%= futbol.text_field :original %></p>
+							<p><%= futbol.text_field :original %></p>
 						<br/>
-						<p>Genero</p>
-						<p><%= futbol.text_field :genre %></p>
+						<p>Genero</p>             
+                   			<%= futbol.select :genre, options_for_genre, :prompt => 'Género', class:'form-control' %>
+                   		<br/>
 						<br/>
 						<p>Director</p>
-						<p><%= futbol.text_field :director %></p>
+							<p><%= futbol.text_field :director %></p>
 						<br/>
 						<p>Puntuación</p>
-						<p><%= futbol.text_field :stars %></p>
+							<p><%= futbol.select :stars, options_for_score, :prompt => 'Puntuación', class:'form-control' %></p>
 						<br/>
 						<p>Protagonista</p>
-						<p><%= futbol.text_field :main_actor %></p>
+							<p><%= futbol.text_field :main_actor %></p>
 						<br/>
 						<p>Siopsis</p>
-						<p><%= futbol.text_area :sinopsis, size: "60x4" %></p>
+							<p><%= futbol.text_area :sinopsis, size: "60x4" %></p>
 						<br/>
 						<p>Año</p>
-						<p><%= futbol.text_field :year %></p>
+							<p><%= futbol.text_field :year %></p>
 						<br/>
 						<p>Poster</p>
-						<p><%= futbol.text_field :url %></p>
+							<p><%= futbol.text_field :url %></p>
+						<p>Precio</p>
+							<p><%= futbol.text_field :precio %></p>	
 			<%= futbol.submit "Guardar" %>
 			<% end %>
+			<br/><br/><br/><br/>
 		</div>
 	</div>
 </div>
