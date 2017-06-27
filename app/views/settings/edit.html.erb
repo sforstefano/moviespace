@@ -1,3 +1,25 @@
+<style type="text/css">
+	input[type=text], select {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    }
+
+    input[type=submit] {
+    width: 15%;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+</style>
+
     <% if flash.present? %>
         <div class="row">
             <div class="col-sm-12 col-md-6 colmd-offset-3" style="padding:25px 0">
@@ -6,20 +28,23 @@
     <% end %> 
 
 <div class="container">
-	<div class="col-lg-6 col-md-6">
+	<div class="col-lg-12 col-xs-12">
 		<div class="editar"> 		
 			<br/>
 			<br/>
 			<%= form_for @setting do |x|%>
-				<p>País:</p>
+				<h3>País:</h3>
 				<div class="field">         	 
 				    <%= x.select :country, options_for_country, :prompt => 'Escoje país', class:'form-control' %>
 				</div> 
 				<br/>
-				<p>Idioma:</p>
+				<br/>
+				<h3>Idioma:</h3>
 				<p><%= x.text_field :language %></p>
-				<br/>	
-				<p><%= x.submit "Guardar" %></p>	 
+				<br/>
+				<div align="center">	
+				<p><%= x.submit "Guardar" %></p>
+				</div>	 
 			<%end%>
 		</div>
 	</div>
