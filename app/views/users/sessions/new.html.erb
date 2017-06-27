@@ -1,25 +1,45 @@
+<style type="text/css">
+  .divv{
+      width: 50%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      }
+  input[type=submit] {
+    width: 15%;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+</style>
+
 <div class="container">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="field">
-      <p>Email</p>
-      <%= f.email_field :email, autofocus: true %>
+    <div class="field" align="center">
+      <h3>Email</h3>
+        <%= f.email_field :email, autofocus: true, :class => 'divv' %>
     </div>
     <br/>
-    <div class="field">
-      <p>Contraseña</p>
-      <%= f.password_field :password, autocomplete: "off" %>
+    <br/>
+    <div class="field" align="center">
+      <h3>Contraseña</h3>
+      <%= f.password_field :password, autocomplete: "off", :class => 'divv' %>
     </div>
     <br/>
-      <% if devise_mapping.rememberable? -%>
+    <div class="actions" align="center">
+      <%= f.submit "Entrar" %>
+    </div>
+          <% if devise_mapping.rememberable? -%>
         <div class="field">
           <%= f.check_box :remember_me %>
           <%= f.label "Recordarte" %>
         </div>
       <% end %>
-
-    <div class="actions">
-   <%= f.submit "Entrar" %>
-    </div>
   <% end %>
   <%= render "users/shared/links" %>
 </div>

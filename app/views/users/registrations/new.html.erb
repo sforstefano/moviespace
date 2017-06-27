@@ -1,29 +1,54 @@
+<style type="text/css">
+  .divv{
+      width: 50%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      }
+  input[type=submit] {
+    width: 15%;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+</style>
+
 <div class="container">
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
 
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true %>
+    <div class="field" align="center">
+      <h3>Email</h3>
+      <%= f.email_field :email, autofocus: true, :class => 'divv' %>
     </div>
     <br/>
-    <div class="field">
-      <%= f.label :password %>
+    <br/>
+    <div class="field" align="center">
+      <h3>Contraseña</h3>
       <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <em>(Mínimo <%= @minimum_password_length %> caracteres)</em>
       <% end %><br />
-      <%= f.password_field :password, autocomplete: "off" %>
+      <%= f.password_field :password, autocomplete: "off", :class => 'divv' %>
     </div>
     <br/>
-    <div class="field">
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <br/>
+    <div class="field" align="center">
+      <h3>Confirmar contraseña</h3>
+      <%= f.password_field :password_confirmation, autocomplete: "off", :class => 'divv' %>
     </div>
     <br/>
-    <div class="actions">
+    <br/>
+    <div class="actions" align="center">
       <%= f.submit "Empezar" %>
     </div>
   <% end %>
+  <br/><br/><br/>
 
 </div>
+
