@@ -9,7 +9,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li><%= link_to "Comprar", select_movies_path %></li>
 					<li> <%=link_to "Editar usuario",  settings_path %></li>
-					<li> <%= link_to 'Logout', destroy_user_session_path, method: :delete %> </li>
+					<li> <%= link_to image_tag("http://res.cloudinary.com/se-or/image/upload/v1498647679/1498665515_basics-17_wsvhgx.png"), destroy_user_session_path, method: :delete %> </li>
 				</ul>
 			</nav>
 <div class="container" align="center">
@@ -22,7 +22,7 @@
 					<button class="hd-xs"><%= link_to "Pelicula", new_pelicula_path %></button>>
 					<button class="hd-xs"> <%=link_to "Editar",  edit_user_registration_path %></button>>
 
-					<button class="hd-xs"> <%= link_to "Go away", destroy_user_session_path, method: :delete %></button>
+					<button class="hd-xs"> <%= link_to image_tag("http://res.cloudinary.com/se-or/image/upload/v1498647679/1498665515_basics-17_wsvhgx.png"), destroy_user_session_path, method: :delete %></button>
 				</ul>
 			</nav>
 		</div>
