@@ -12,13 +12,13 @@
 					<p><%= pelic.text_field :original, placeholder:"Titulo original" %></p>
 					<br/>
 					<p>Genero</p>
-					<p><%= pelic.text_field :genre, placeholder:"Genero" %></p>
+					<p><%= pelic.select :genre, options_for_genre, :prompt => 'Género', class:'form-control' %></p>
 					<br/>
 					<p>Director</p>
 					<p><%= pelic.text_field :director, placeholder:"Director" %></p>
 					<br/>
 					<p>Puntuación</p>
-					<p><%= pelic.text_field :stars, placeholder: "Puntuación" %></p>
+					<p><%= pelic.select :stars, options_for_score, :prompt => 'Puntuación', class:'form-control' %></p>
 					<br/>
 					<p>Proagonista</p>
 					<p><%= pelic.text_field :main_actor, placeholder: "Actor principal" %></p>

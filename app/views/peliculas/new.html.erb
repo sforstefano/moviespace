@@ -9,9 +9,8 @@
 							<p><%= futbol.text_field :original %></p>
 						<br/>
 						<p>Genero</p>             
-                   			<%= futbol.select :genre, options_for_genre, :prompt => 'Género', class:'form-control' %>
+                   			<p><%= futbol.select :genre, options_for_genre, :prompt => 'Género', class:'form-control' %></p>
                    		<br/>
-						<br/>
 						<p>Director</p>
 							<p><%= futbol.text_field :director %></p>
 						<br/>
