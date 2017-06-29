@@ -1,17 +1,35 @@
 <!-- CREAR COMENTARIO -->
 <div class="container">
-<%= form_for([@pelicula, @pelicula.comentarios.build]) do |f| %>
-<p>
-<%= f.label "Nombre" %><br>
-<%= f.text_field :name %>
-</p>
-<p>
-<%= f.label "Comentario" %><br>
-<%= f.text_area :comment, size: "80x4" %>
-</p>
-<p>
-<%= f.submit 'Guardar', class:"btn btn-xs btn-primary"%>
-</p>
+	<div class="coment">
+			<%= form_for([@pelicula, @pelicula.comentarios.build]) do |f| %>
+				<div class="col-lg-4 visible-lg">
+					<p>
+					<%= f.label "Nombre" %><br>
+					<%= f.text_field :name %>
+					</p>
+					<p>
+					<%= f.label "Comentario" %><br>
+					<%= f.text_area :comment, size: "80x4" %>
+					</p>
+					<p>
+					<%= f.submit 'Guardar', class:"btn btn-xs btn-primary"%>
+					</p>
+				</div>
+				<div class="col-xs-12 visible-xs">
+					<p>
+					<%= f.label "Nombre" %><br>
+					<%= f.text_field :name %>
+					</p>
+					<p>
+					<%= f.label "Comentario" %><br>
+					<%= f.text_area :comment, size: "40x4" %>
+					</p>
+					<p>
+					<%= f.submit 'Guardar', class:"btn btn-xs btn-primary"%>
+					</p>
+				</div>
+
+			<% end %>
+	</div>
 </div> <!-- end panel -->
-<% end %>
-</div>
+

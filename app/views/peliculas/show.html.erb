@@ -1,51 +1,55 @@
 <div class="container">
-	<div class="title">
-		<h1><%= @pelicula.name %></h1>
-		<h4><%= @pelicula.original %></h4>
-			<% if @pelicula.stars == 5 %>
-				<img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png"><img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png"><img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png"><img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png">
-				<img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png">
-			<% elsif @pelicula.stars == 4 %>
-				<img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png"><img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png"><img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png"><img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png">
-			<% elsif  @pelicula.stars == 3 %>
-				<img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png"><img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png"><img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png">
-			<% elsif @pelicula.stars == 2 %>
-				<img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png"><img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png">
-			<% elsif @pelicula.stars == 1 %>
-				<img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png">
-			<% else %>
-			 	Sin puntiación
-			<% end %>
-	</div>
-	<div class="show">
-		<div class="col-lg-4">
-			<div class="poster">
-				<p><%= image_tag @pelicula.url %></p>
-			</div>
+	<div class="peliShow">
+		<div class="title">
+			<h1><%= @pelicula.name %></h1>
+			<h4><%= @pelicula.original %></h4>
+				<% if @pelicula.stars == 5 %>
+					<img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png"><img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png"><img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png"><img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png">
+					<img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png">
+				<% elsif @pelicula.stars == 4 %>
+					<img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png"><img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png"><img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png"><img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png">
+				<% elsif  @pelicula.stars == 3 %>
+					<img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png"><img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png"><img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png">
+				<% elsif @pelicula.stars == 2 %>
+					<img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png"><img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png">
+				<% elsif @pelicula.stars == 1 %>
+					<img src="http://res.cloudinary.com/se-or/image/upload/c_scale,w_30/v1498470700/Stars_pnb0hq.png">
+				<% else %>
+				 	Sin puntiación
+				<% end %>
 		</div>
-		<div class="col-lg-8">
-			<div class="showPeli">
-				<p>Director <%= @pelicula.director %></p>
-				<br/>
-				<p>Protagonizada por <%= @pelicula.main_actor %></p>
-				<br/>
-				<p><%= @pelicula.year %></p>
-				<br/>
-				<p><%= @pelicula.genre %></p>
-				<br/>
-				<p><%= @pelicula.sinopsis %></p>
-				<br/>
+		
+			<div class="show">
+				<div class="col-lg-4">
+					<div class="poster">
+						<p><%= image_tag @pelicula.url %></p>
+					</div>
+				</div>
+				<div class="col-lg-8">
+					<div class="showPeli">
+						<p>Director <%= @pelicula.director %></p>
+						<br/>
+						<p>Protagonizada por <%= @pelicula.main_actor %></p>
+						<br/>
+						<p><%= @pelicula.year %></p>
+						<br/>
+						<p><%= @pelicula.genre %></p>
+						<br/>
+						<p><%= @pelicula.sinopsis %></p>
+						<br/>
 
 
+					</div>
+				</div>
+				<div class="col-lg-4 visible-lg">
+					<% if user_signed_in? %>
+						<button><%= link_to "Editar Pelicula", edit_pelicula_path %></button>
+						<button><%= link_to 'Borrar pelicula', pelicula_path(@pelicula), :method => :delete %></button>
+					<% end %>
+				</div>
 			</div>
-		</div>
-		<div class="col-lg-4 visible-lg">
-			<% if user_signed_in? %>
-				<button><%= link_to "Editar Pelicula", edit_pelicula_path %></button>
-				<button><%= link_to 'Borrar pelicula', pelicula_path(@pelicula), :method => :delete %></button>
-			<% end %>
-		</div>
 	</div>
+
 </div>
 	<br/>
 	<br/>
